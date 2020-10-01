@@ -355,7 +355,7 @@ addons:
       - libpcap-dev
       - xsltproc
       - libxml2-utils
-      #- libsystemd-dev
+      - libsystemd-dev
       #- libsystemd-journal-dev
       - librpm-dev
       # From deadsnakes PPA
