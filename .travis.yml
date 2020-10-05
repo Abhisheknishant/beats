@@ -33,9 +33,8 @@ jobs:
     - os: linux
       env: TARGETS="check"
       go: $TRAVIS_GO_VERSION
-      stage:
-        - service docker status
-        - check
+      stage: check
+      before_script: service docker status 
 
     # Filebeat
     - os: linux
