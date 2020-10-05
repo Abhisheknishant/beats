@@ -1,5 +1,5 @@
 sudo: required
-dist: trusty
+dist: xenial
 services:
   - docker
 
@@ -33,7 +33,9 @@ jobs:
     - os: linux
       env: TARGETS="check"
       go: $TRAVIS_GO_VERSION
-      stage: check
+      stage:
+        - service docker status
+        - check
 
     # Filebeat
     - os: linux
